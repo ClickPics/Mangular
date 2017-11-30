@@ -1,50 +1,24 @@
-<table class="ui celled table">
-  <thead>
-  <tr><th>Header</th>
-    <th>Header</th>
-    <th>Header</th>
-  </tr></thead>
-  <tbody>
-  <tr>
-    <td>
-      <div class="ui card">
-        <div class="content">
-          <div class="header">Senior's Golf Tournament</div>
-          <div class="description">
-            800 - 1000
+<div *ngFor="let day of week">
+  <table *ngIf="day.events.length != 0" class="ui celled table">
+    <thead>
+    <tr>
+      <th>{{day.dayOfWeek}}</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of day.events">
+        <td>
+          <div class="ui card">
+            <div class="content">
+              <div class="header">{{event.activityCategory}}</div>
+              <div class="description">
+                Start: {{event.startDateTime}}
+                End: {{event.endDateTime}}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <div class="ui card">
-        <div class="content">
-          <div class="header">Senior's Golf Tournament</div>
-          <div class="description">
-            800 - 1000
-          </div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <div class="ui card">
-        <div class="content">
-          <div class="header">Senior's Golf Tournament</div>
-          <div class="description">
-            800 - 1000
-          </div>
-        </div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td>Cell</td>
-    <td>Cell</td>
-    <td>Cell</td>
-  </tr>
-  <tr>
-    <td>Cell</td>
-    <td>Cell</td>
-    <td>Cell</td>
-  </tr>
-  </tbody>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
