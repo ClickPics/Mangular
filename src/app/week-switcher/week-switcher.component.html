@@ -1,0 +1,8 @@
+<div class="week-switcher">
+  <span class="fa fa-chevron-left" aria-hidden="true" (click)="prevWeek()"></span>
+    <strong>Week of: {{monday | date:'fullDate'}}</strong>
+  <span class="fa fa-chevron-right" (click)="nextWeek()" aria-hidden="true"></span>
+</div>
+<div class="calendar">
+  <app-week-view [week]=week></app-week-view>
+</div>
