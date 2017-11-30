@@ -8,7 +8,10 @@ import {HttpClientModule} from '@angular/common/http';
 })
 export class WeekViewComponent implements OnInit {
 
-  constructor() { }
+  weeklyData: String
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

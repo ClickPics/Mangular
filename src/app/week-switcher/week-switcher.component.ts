@@ -6,8 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./week-switcher.component.css']
 })
 export class WeekSwitcherComponent implements OnInit {
+  date: Date;
+  constructor() {
+    this.date = new Date();
+  }
 
-  constructor() { }
+  prevWeek() {
+    
+  }
+
+  nextWeek() {
+
+  }
 
   ngOnInit() {
   }
