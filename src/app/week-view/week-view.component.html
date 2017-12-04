@@ -1,0 +1,27 @@
+<div class="ui container" *ngIf="isWeekEmpty">
+    <h1 class="ui center aligned">No events for this week</h1>
+</div>
+<div *ngFor="let day of week">
+  <h1>{{monday}}</h1>
+  <table *ngIf="day.events.length != 0" class="ui celled table">
+    <thead>
+      <th colSpan="{{day.events.length}}"><h2 class="ui center aligned">{{day.dayOfWeek}}</h2></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-width: 0;" *ngFor="let event of day.events">
+          <div class="ui card centered">
+            <div class="content">
+              <div class="header">{{event.activityCategory}}</div>
+              <div class="description">
+                Start: {{event.startDateTime}}
+                <br/>
+                End: {{event.endDateTime}}
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
