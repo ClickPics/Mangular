@@ -11,7 +11,8 @@ export class WeekSwitcherComponent implements OnInit {
   private BASE_URL = Config.url;
   private headers = new Headers({'Content-Type': 'application/json'});
   private monday: Date;
-  private week: Object
+  
+  week: Object
 
   constructor(private http: HttpClient) {
     let date = new Date();
