@@ -1,6 +1,6 @@
-<div class="week-switcher">
+<div style="font-size: 25px;" class="week-switcher">
   <span class="fa fa-chevron-left" aria-hidden="true" (click)="prevWeek()"></span>
-    <strong>Week of: {{monday | date:'fullDate'}}</strong>
+    <span><strong>Week of: {{monday | date:'fullDate'}}</strong></span>
   <span class="fa fa-chevron-right" (click)="nextWeek()" aria-hidden="true"></span>
 </div>
 <div class="calendar">

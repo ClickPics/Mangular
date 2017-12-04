@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import Config from '../../config/Config' 
 
 @Component({
   selector: 'app-week-switcher',
@@ -7,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./week-switcher.component.css']
 })
 export class WeekSwitcherComponent implements OnInit {
-  private BASE_URL = "http://localhost:4751/api/EventsApi";
+  private BASE_URL = Config.url;
   private headers = new Headers({'Content-Type': 'application/json'});
   private monday: Date;
   private week: Object
@@ -45,6 +46,7 @@ export class WeekSwitcherComponent implements OnInit {
       console.log(this.week)
     });
   }
+  
   ngOnInit() {
   }
 
