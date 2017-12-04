@@ -10,8 +10,8 @@ import Config from '../../config/Config'
 export class WeekSwitcherComponent implements OnInit {
   private BASE_URL = Config.url;
   private headers = new Headers({'Content-Type': 'application/json'});
-  private monday: Date;
   
+  monday: Date;
   week: Object
 
   constructor(private http: HttpClient) {
